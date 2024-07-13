@@ -49,6 +49,7 @@
     "valtio": "1.13.2"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.8",
     "@ianvs/prettier-plugin-sort-imports": "~4.3.0",
     "@preact/preset-vite": "~2.8.3",
     "postcss": "~8.4.39",
