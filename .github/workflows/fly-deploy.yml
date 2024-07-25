@@ -6,16 +6,6 @@ on:
     branches:
       - main
 jobs:
-  test:
-    name: Test app
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build env
-        run: |
-          echo "BUILDING ENV..." && \
-          echo "${{ toJson(vars) }}" >> .env && \
-          cat .env
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
@@ -26,3 +16,7 @@ jobs:
       - run: flyctl deploy --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          PHANPY_CLIENT_NAME: ${{ vars.PHANPY_CLIENT_NAME }}
+          PHANPY_LINGVA_INSTANCES: ${{ vars.PHANPY_LINGVA_INSTANCES }}
+          PHANPY_PRIVACY_POLICY_URL: ${{ vars.PHANPY_PRIVACY_POLICY_URL }}
+          PHANPY_WEBSITE: ${{ vars.PHANPY_WEBSITE }}
