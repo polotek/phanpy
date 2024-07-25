@@ -12,7 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build env
-        run: echo "${{ vars }}" >> .env && cat .env
+        run: |
+          echo "BUILDING ENV..." && \
+          echo "${{ toJson(vars) }}" >> .env && \
+          cat .env
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
