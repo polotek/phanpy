@@ -18,4 +18,5 @@ jobs:
         run: |
           echo '${{ toJson(vars) }}' > /tmp/vars.json
           jq -r 'to_entries | .[] | .key+"=\""+.value+"\""' /tmp/vars.json > .env && \
+          cat .env && \
           flyctl deploy --remote-only
