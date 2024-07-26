@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 
 # Custom
-.env
 .env.secrets
 .env.dev
 phanpy-dist.zip
