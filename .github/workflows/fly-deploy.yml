@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy app
-    runs-on: node:21.7.2-slim
+    runs-on: ubuntu-latest
     concurrency: deploy-group # optional: ensure only one action runs at a time
     steps:
       - uses: actions/checkout@v4
