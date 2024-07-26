@@ -1,4 +1,4 @@
-d# Logs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 
 # Custom
-.env
 .env.secrets
 .env.dev
 phanpy-dist.zip
